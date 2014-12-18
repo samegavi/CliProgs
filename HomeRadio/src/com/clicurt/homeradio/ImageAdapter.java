@@ -14,7 +14,6 @@ import android.widget.ImageView;
 @SuppressLint("ViewTag")
 public class ImageAdapter extends BaseAdapter {
    private Context mContext;
-   //private LayoutInflater inflater;
 
     // Keep all Images in array
 
@@ -26,7 +25,6 @@ public class ImageAdapter extends BaseAdapter {
     // Constructor
     public ImageAdapter(Context c){
         mContext = c;
-       // inflater = LayoutInflater.from(c);
     }
 
     @Override
@@ -43,22 +41,6 @@ public class ImageAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return 0;
     }
-/*
-    public View getView(int i, View view, ViewGroup viewGroup) {
-
-        View v = view;
-        ImageView picture;
-        if (v == null) {
-            v = inflater.inflate(R.layout.mlroundedimageview, viewGroup, false);
-            v.setTag(R.id.picture, v.findViewById(R.id.picture));
-            v.setLayoutParams(new GridView.LayoutParams(
-                    (int)mContext.getResources().getDimension(R.dimen.width),
-                    (int)mContext.getResources().getDimension(R.dimen.height)));
-        }
-        picture = (ImageView) v.getTag(R.id.picture);
-        picture.setImageResource(mThumbIds[i]);
-        return v;
-    }*/
     
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
