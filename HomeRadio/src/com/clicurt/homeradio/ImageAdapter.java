@@ -2,7 +2,7 @@ package com.clicurt.homeradio;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.view.LayoutInflater;
+//import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -16,7 +16,7 @@ import android.widget.ImageView;
 @SuppressLint("ViewTag")
 public class ImageAdapter extends BaseAdapter {
    private Context mContext;
-   private LayoutInflater inflater;
+   //private LayoutInflater inflater;
    
     // Keep all Images in array
 
@@ -28,7 +28,7 @@ public class ImageAdapter extends BaseAdapter {
     // Constructor
     public ImageAdapter(Context c){
         mContext = c;
-        inflater = LayoutInflater.from(c);
+  //      inflater = LayoutInflater.from(c);
     }
 
     @Override
@@ -70,7 +70,6 @@ public class ImageAdapter extends BaseAdapter {
                     (int)mContext.getResources().getDimension(R.dimen.height)));
         }
         picture = (ImageView) v.getTag(R.id.picture);
-        picture.setImageResource(mThumbIds[i]);
         return v;
     }*/
 }
