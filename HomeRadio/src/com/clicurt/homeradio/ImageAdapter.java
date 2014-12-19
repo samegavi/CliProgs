@@ -45,7 +45,7 @@ public class ImageAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return 0;
     }
-   /* 
+    
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView = new ImageView(mContext);
@@ -56,7 +56,7 @@ public class ImageAdapter extends BaseAdapter {
                 (int)mContext.getResources().getDimension(R.dimen.height)));
         return imageView;
     }
-    */
+    /*
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
@@ -72,5 +72,5 @@ public class ImageAdapter extends BaseAdapter {
         picture = (ImageView) v.getTag(R.id.picture);
         picture.setImageResource(mThumbIds[i]);
         return v;
-    }
+    }*/
 }
