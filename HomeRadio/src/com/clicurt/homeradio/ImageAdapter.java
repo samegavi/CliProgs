@@ -45,7 +45,7 @@ public class ImageAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return 0;
     }
-    /*
+   /* 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView = new ImageView(mContext);
@@ -63,7 +63,7 @@ public class ImageAdapter extends BaseAdapter {
         View v = view;
         ImageView picture;
         if (v == null) {
-            v = inflater.inflate(R.layout.roundimage, viewGroup, false);
+            v = inflater.inflate(R.layout.mlroundedimageview, viewGroup, false);
             v.setTag(R.id.picture, v.findViewById(R.id.picture));
             v.setLayoutParams(new GridView.LayoutParams(
                     (int)mContext.getResources().getDimension(R.dimen.width),

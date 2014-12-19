@@ -57,7 +57,8 @@ public class MLRoundedImageView extends ImageView {
         if (bmp.getWidth() != radius || bmp.getHeight() != radius) {
             float smallest = Math.min(bmp.getWidth(), bmp.getHeight());
             float factor = smallest / radius;
-            sbmp = Bitmap.createScaledBitmap(bmp, (int)(bmp.getWidth() / factor), (int)(bmp.getHeight() / factor), false);
+            sbmp = Bitmap.createScaledBitmap(bmp, (int)(bmp.getWidth() / factor), 
+            		(int)(bmp.getHeight() / factor), false);
         } else {
             sbmp = bmp;
         }
