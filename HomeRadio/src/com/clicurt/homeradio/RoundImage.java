@@ -1,5 +1,15 @@
 package com.clicurt.homeradio;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.Paint;
+import android.graphics.PixelFormat;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.Shader;
+import android.graphics.drawable.Drawable;
 public class RoundImage extends Drawable {
       private final Bitmap mBitmap;
       private final Paint mPaint;
