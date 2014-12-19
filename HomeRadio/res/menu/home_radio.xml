@@ -1,38 +1,39 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:homeradio="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	tools:context="com.clicurt.homeradio.HomeRadio" >
 
 	<item
 		android:id="@+id/action_settings"
+		android:icon="@drawable/ic_menu_settings"
 		android:orderInCategory="100"
 		android:title="@string/action_settings"
-		app:showAsAction="never"/>
+		homeradio:showAsAction="ifRoom"/>
 	<item 
 	    android:id="@+id/action_search"
 	    android:icon="@android:drawable/ic_menu_search"
 	    android:title="@string/action_search"
-	    android:showAsAction="ifRoom"/>
+	    homeradio:showAsAction="ifRoom|withText"/>
 	<item
 	    android:id="@+id/action_share"
 	    android:icon="@android:drawable/ic_menu_share"
 	    android:title="@string/action_location"
-	    android:showAsAction="ifRoom"/>
+	    homeradio:showAsAction="always"/>
 	<item 
 	    android:id="@+id/action_refresh"
-	    android:icon="@drawable/ic_action_refresh"
+	    android:icon="@drawable/ic_menu_refresh"
 	    android:title="@string/action_refresh"
-	    android:showAsAction="ifRoom"/>
+	    homeradio:showAsAction="always"/>
 	<item 
 	    android:id="@+id/action_help"
-	    android:icon="@drawable/ic_action_help"
+	    android:icon="@drawable/ic_menu_help"
 	    android:title="@string/action_help"
-	    android:showAsAction="never"/>
+	    homeradio:showAsAction="ifRoom|withText"/>
 	<item 
 	    android:id="@+id/action_check_updates"
-	    android:icon="@drawable/ic_action_update"
+	    android:icon="@drawable/ic_menu_update"
 	    android:title="@string/action_check_updates"
-	    android:showAsAction="never"/>"
+	    homeradio:showAsAction="ifRoom|withText"/>
 
 </menu>
