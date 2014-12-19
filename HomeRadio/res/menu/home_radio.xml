@@ -20,17 +20,17 @@
 	    android:title="@string/action_location"
 	    android:showAsAction="ifRoom"/>
 	<item 
-	    android:id="@id/action_refresh"
+	    android:id="@+id/action_refresh"
 	    android:icon="@drawable/ic_action_refresh"
 	    android:title="@string/action_refresh"
 	    android:showAsAction="ifRoom"/>
 	<item 
-	    android:id="@id/action_help"
+	    android:id="@+id/action_help"
 	    android:icon="@drawable/ic_action_help"
 	    android:title="@string/action_help"
 	    android:showAsAction="never"/>
 	<item 
-	    android:id="@id/action_check_updates"
+	    android:id="@+id/action_check_updates"
 	    android:icon="@drawable/ic_action_update"
 	    android:title="@string/action_check_updates"
 	    android:showAsAction="never"/>"
