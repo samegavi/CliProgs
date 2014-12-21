@@ -16,12 +16,39 @@
 		<activity
 			android:name=".HomeRadio"
 			android:label="@string/app_name" >
+			<meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+ 
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
+		
+		<!-- Search results activity -->
+        <activity android:name=".SearchResultsActivity">
+            <meta-data
+	            android:name="android.support.PARENT_ACTIVITY" 
+	            android:value=".HomeRadio"/>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+ 
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        
+        <!-- Location found activity -->
+        <activity
+            android:name="com.clicurt.homeradio.LocationFound"
+            android:label="@string/activity_new_message">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+            	android:value=".HomeRadio" />
+        </activity>
 	</application>
 
 </manifest>
