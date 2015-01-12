@@ -1,9 +1,7 @@
 package com.clicurt.homeradio;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
-//import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
@@ -12,90 +10,44 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListView;
 
-public class HomeRadio extends ActionBarActivity{
-	AlertDialog alertDialogStations;
- 
-    // Refresh menu item
+
+public class HomeRadio extends ActionBarActivity {
+    GridView gridView;
     private MenuItem refreshMenuItem;
-    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_radio);
-       
-        GridView gridView = (GridView) findViewById(R.id.grid_view);
+
+        gridView = (GridView) findViewById(R.id.grid_view);
+        // Instance of ImageAdapter Class
         gridView.setAdapter(new ImageAdapter(this));
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position,long id) {
-              switch (position) {
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                switch (position) {
                     case 0:
-                        showStations();
+                        Intent intent = new Intent(HomeRadio.this, StationList.class);
+                        //Sending data to another Activity
+                        startActivity(intent);
                         break;
-
                 }
             }
         });
-    }
-
-    public void showStations(){
-
-        // add your items, this can be done programatically
-        // your items can be from a database
-        ObjectItem[] ObjectItemData = new ObjectItem[21];
-
-        ObjectItemData[0] = new ObjectItem(99.7, "Joy");
-        ObjectItemData[1] = new ObjectItem(2, "Adom");
-        ObjectItemData[2] = new ObjectItem(3, "Spice");
-        ObjectItemData[3] = new ObjectItem(94, "Atlantis");
-        ObjectItemData[4] = new ObjectItem(95, "Y");
-        ObjectItemData[5] = new ObjectItem(96, "AB Zion Radio");
-        ObjectItemData[6] = new ObjectItem(97, "Amansan FM UK ");
-        ObjectItemData[7] = new ObjectItem(98, "Evang. Bright Radio");
-        ObjectItemData[8] = new ObjectItem(99, "Free Will Christ Radio");
-        ObjectItemData[9] = new ObjectItem(100, "Ghana Waves");
-        ObjectItemData[10] = new ObjectItem(101, "Highlife Radio");
-        ObjectItemData[11] = new ObjectItem(102, "Mighty FM");
-        ObjectItemData[12] = new ObjectItem(103, "Mighty God Radio");
-        ObjectItemData[13] = new ObjectItem(104, "New Covenant Gospel");
-        ObjectItemData[14] = new ObjectItem(105, "Osrane FM");
-        ObjectItemData[15] = new ObjectItem(104.3, "Peace FM");
-        ObjectItemData[16] = new ObjectItem(107, "Praises Radio");
-        ObjectItemData[17] = new ObjectItem(108, "Rainbow Radio");
-        ObjectItemData[18] = new ObjectItem(109, "Sankofa Radio");
-        ObjectItemData[19] = new ObjectItem(110, "Starr Fm");
-
-        ObjectItemData[20] = new ObjectItem(111, "Word Radio");
-
-        // our adapter instance
-        ArrayAdapterItem adapter = new ArrayAdapterItem(this, R.layout.list_view_row_item, ObjectItemData);
-
-        // create a new ListView, set the adapter and item click listener
-        ListView listViewItems = new ListView(this);
-        listViewItems.setAdapter(adapter);
-        listViewItems.setOnItemClickListener(new OnItemClickListenerListViewItem());
-
-        // put the ListView in the pop up
-        alertDialogStations = new AlertDialog.Builder(HomeRadio.this)
-                .setView(listViewItems)
-                .setTitle("Radio Stations")
-                .setIcon(R.drawable.radio_icon_1)
-                .show();
 
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-       // MenuInflater inflater = getMenuInflater();
-    	getMenuInflater().inflate(R.menu.home_radio, menu);   	
-    			return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.home_radio, menu);
+        //return true;
+        return super.onCreateOptionsMenu(menu);
     }
-
+    
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
