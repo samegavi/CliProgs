@@ -347,8 +347,9 @@ int drawable ic_menu_settings 0x7f02003a
 int drawable ic_menu_update 0x7f02003b
 int drawable music_icon 0x7f02003c
 int drawable radio_icon 0x7f02003d
-int drawable twitter_bird 0x7f02003e
-int drawable water_background 0x7f02003f
+int drawable radio_icon_1 0x7f02003e
+int drawable twitter_bird 0x7f02003f
+int drawable water_background 0x7f020040
 int id action_bar 0x7f0a0031
 int id action_bar_activity_content 0x7f0a0003
 int id action_bar_container 0x7f0a0030

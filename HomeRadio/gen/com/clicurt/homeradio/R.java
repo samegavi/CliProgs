@@ -1646,8 +1646,9 @@ containing a value of this type.
         public static final int ic_menu_update=0x7f02003b;
         public static final int music_icon=0x7f02003c;
         public static final int radio_icon=0x7f02003d;
-        public static final int twitter_bird=0x7f02003e;
-        public static final int water_background=0x7f02003f;
+        public static final int radio_icon_1=0x7f02003e;
+        public static final int twitter_bird=0x7f02003f;
+        public static final int water_background=0x7f020040;
     }
     public static final class id {
         public static final int action_bar=0x7f0a0031;

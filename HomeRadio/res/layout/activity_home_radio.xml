@@ -1,8 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
-	
+   
     <GridView
         android:background="@drawable/water_background"
         android:id="@+id/grid_view"
@@ -13,8 +12,7 @@
         android:horizontalSpacing="10dp"
         android:verticalSpacing="5dp"
         android:gravity="center"
-        android:stretchMode="columnWidth"
-        android:padding="10dp">
+        android:stretchMode="columnWidth">
 
     </GridView>
 </FrameLayout>
