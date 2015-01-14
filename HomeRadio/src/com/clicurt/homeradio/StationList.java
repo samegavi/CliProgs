@@ -30,7 +30,8 @@ public class StationList extends ActionBarActivity {
 	private static final String TAG = StationList.class.getSimpleName();
 
 	// stations json url
-	private static final String url = "https://api.myjson.com/bins/18lfn";
+	//private static final String url = "https://api.myjson.com/bins/18lfn";
+	private static final String url = "https://raw.githubusercontent.com/samegavi/ghana-online-radio-stations/master/stationlist.json";
 	private ProgressDialog pDialog;
 	private List<Station> stationList = new ArrayList<Station>();
 	private ListView listView;
